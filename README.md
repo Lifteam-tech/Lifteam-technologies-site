@@ -1,26 +1,24 @@
-# Lifteam & Technologies — V3
+# Lifteam & Technologies — V4
 
-## Contenu
-- `index.html` : page d'accueil V3
-- `styles.css` : identité visuelle responsive
-- `script.js` : catalogue, filtres et services
+V4 fusionne les évolutions prévues pour V3.2 et V3.3 en une seule version commerciale.
 
-## Mise en ligne GitHub Pages
-1. Remplacer les fichiers de la racine du dépôt par ces trois fichiers.
-2. Commit / push sur la branche publiée par GitHub Pages.
-3. Vérifier l'URL GitHub Pages.
+## Fichiers
+- `index.html` : accueil, formations, méthode, agence, LCI, preuves, témoignages, portfolio, FAQ et contact.
+- `formation.html` : fiches dynamiques des formations.
+- `agence.html` : hub commercial des 8 services de l'Agence Digitale.
+- `service.html` : fiche détaillée dynamique pour chacun des 8 services.
+- `portfolio.html` : structure de portfolio et études de cas.
+- `a-propos.html` : vision, mission et valeurs.
+- `styles.css` : identité visuelle responsive.
+- `script.js` : catalogue formations, filtres et services.
 
-## Points à personnaliser avant publication
-- Remplacer les chiffres 6+, 500+, 50+ si la Direction souhaite des chiffres actualisés.
-- Ajouter les vrais visuels/portraits de l'équipe.
-- Ajouter les fiches formation détaillées comme pages dédiées.
-- Ajouter les pages/services détaillés et le portfolio.
-- Vérifier les coordonnées et CTA WhatsApp.
-- Conserver la mention éducative sur les formations financières.
+## Mise en ligne
+Remplacez les fichiers de la version précédente dans le dépôt GitHub Pages et conservez les mêmes noms de fichiers. Le site fonctionne sans serveur et reste compatible avec GitHub Pages.
 
-
-## V3.1 — Fiches formation
-- `formation.html` fournit une fiche commerciale dynamique.
-- Depuis le catalogue, « Voir la formation » ouvre la fiche avec le bon contenu via `?course=...`.
-- 8 formations prioritaires disposent de contenus détaillés.
-- Le CTA ouvre WhatsApp avec le nom de la formation.
+## À personnaliser avant une communication commerciale
+- Remplacer les témoignages de démonstration par des témoignages vérifiés.
+- Remplacer les catégories de portfolio par les réalisations réelles et leurs résultats vérifiables.
+- Vérifier les chiffres 6+, 500+ et 50+ avant publication si nécessaire.
+- Ajouter les vraies photos de l'équipe et les logos clients avec autorisation.
+- Vérifier les tarifs, dates et modalités des formations avant chaque campagne.
+- Pour LCI, ne pas présenter un certificat Lifteam comme une accréditation externe sans reconnaissance ou partenariat documenté.
