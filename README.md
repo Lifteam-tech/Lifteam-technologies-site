@@ -17,3 +17,10 @@
 - Ajouter les pages/services détaillés et le portfolio.
 - Vérifier les coordonnées et CTA WhatsApp.
 - Conserver la mention éducative sur les formations financières.
+
+
+## V3.1 — Fiches formation
+- `formation.html` fournit une fiche commerciale dynamique.
+- Depuis le catalogue, « Voir la formation » ouvre la fiche avec le bon contenu via `?course=...`.
+- 8 formations prioritaires disposent de contenus détaillés.
+- Le CTA ouvre WhatsApp avec le nom de la formation.

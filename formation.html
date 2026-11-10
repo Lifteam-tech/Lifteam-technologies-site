@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fiche formation Lifteam & Technologies">
+<title>Formation | Lifteam & Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.detail-hero{background:linear-gradient(125deg,#10265b,#1d3974);color:#fff;padding:72px 7%}
+.detail-wrap{max-width:1100px;margin:auto}
+.breadcrumb{font-size:12px;color:#c9d4e8;margin-bottom:25px}
+.detail-hero h1{font:800 clamp(38px,6vw,64px)/1.05 Montserrat;margin:0 0 18px;max-width:900px}
+.detail-hero .promise{font-size:19px;color:#dce5f5;max-width:800px}
+.detail-main{display:grid;grid-template-columns:1.25fr .65fr;gap:45px;padding:70px 7%;max-width:1250px;margin:auto}
+.detail-main h2{font:800 30px Montserrat;color:#10265b;margin:0 0 16px}
+.detail-main h3{font:700 21px Montserrat;color:#10265b}
+.detail-main p,.detail-main li{color:#667085}
+.detail-main ul{padding-left:20px}
+.detail-side{background:#f7f8fb;border:1px solid #e5e8ee;border-radius:20px;padding:26px;height:max-content;position:sticky;top:100px}
+.meta{display:grid;gap:14px;margin:20px 0}
+.meta div{border-bottom:1px solid #e3e6ec;padding-bottom:12px}
+.meta strong{display:block;color:#10265b;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.meta span{font-size:14px}
+.cta-stack{display:grid;gap:10px}
+.detail-section{margin-bottom:45px}
+.module{padding:16px 18px;border:1px solid #e5e8ee;border-radius:12px;margin:9px 0;background:#fff}
+.module strong{color:#10265b}
+.notice{background:#fff8df;border-left:4px solid #f5b900;padding:16px;border-radius:8px;color:#5b4a18;font-size:13px}
+@media(max-width:850px){.detail-main{grid-template-columns:1fr}.detail-side{position:static}.detail-hero{padding:55px 6%}.detail-main{padding:55px 6%}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LIFTEAM <em>&amp;</em></strong><small>TECHNOLOGIES</small></span></a>
+<nav class="desktop-nav"><a href="index.html#formations">Formations</a><a href="index.html#agence">Agence Digitale</a><a href="index.html#lci">LCI</a><a class="nav-cta" href="index.html#contact">Parler à Lifteam ↗</a></nav>
+<a class="menu-btn" href="index.html">☰</a>
+</header>
+
+<section class="detail-hero">
+<div class="detail-wrap">
+<div class="breadcrumb"><a href="index.html">Accueil</a> → <a href="index.html#formations">Formations</a> → <span id="crumb">Formation</span></div>
+<p class="eyebrow">LIFTEAM • FORMATION &amp; FINANCE</p>
+<h1 id="title">Formation Lifteam</h1>
+<p class="promise" id="promise">Développez une compétence utile, pratique et directement mobilisable.</p>
+</div>
+</section>
+
+<main class="detail-main">
+<div>
+<section class="detail-section">
+<h2>La promesse</h2>
+<p id="promise2"></p>
+</section>
+
+<section class="detail-section">
+<h2>À qui s'adresse cette formation ?</h2>
+<ul id="audience"></ul>
+</section>
+
+<section class="detail-section">
+<h2>Objectifs</h2>
+<ul id="objectives"></ul>
+</section>
+
+<section class="detail-section">
+<h2>Programme</h2>
+<div id="modules"></div>
+</section>
+
+<section class="detail-section">
+<h2>Votre parcours Lifteam</h2>
+<p><strong>Apprendre → Pratiquer → Entreprendre → Rayonner</strong></p>
+<p>Vous ne vous contentez pas d'accumuler des notions : vous développez une capacité à pratiquer, créer et utiliser votre compétence dans un contexte réel.</p>
+</section>
+
+<section class="detail-section">
+<h2>Validation &amp; accompagnement</h2>
+<p id="validation"></p>
+<p>Un accompagnement pédagogique est prévu selon le format et les modalités du parcours. Les conditions précises sont communiquées lors de l'inscription.</p>
+</section>
+
+<div class="notice">Les modalités, dates, tarifs et conditions peuvent varier selon la session. Contactez Lifteam pour recevoir la fiche d'inscription actualisée.</div>
+</div>
+
+<aside class="detail-side">
+<p class="eyebrow dark">VOTRE PROCHAINE ÉTAPE</p>
+<h3 id="sideTitle">Commencer la formation</h3>
+<div class="meta">
+<div><strong>Catégorie</strong><span id="category"></span></div>
+<div><strong>Format</strong><span id="format"></span></div>
+<div><strong>Niveau</strong><span id="level"></span></div>
+<div><strong>Accompagnement</strong><span id="support"></span></div>
+</div>
+<div class="cta-stack">
+<a id="whatsapp" class="btn btn-gold" target="_blank" rel="noopener">Demander les détails →</a>
+<a href="index.html#formations" class="btn btn-dark">Voir les autres formations</a>
+</div>
+</aside>
+</main>
+
+<footer><div class="footer-brand"><span class="brand-mark">L</span><div><strong>LIFTEAM &amp; TECHNOLOGIES</strong><small>Le savoir pour réussir, le digital pour rayonner.</small></div></div><p>© 2026 Lifteam &amp; Technologies</p></footer>
+
+<script>
+const catalog = {
+"Marketing Digital : de Débutant à Professionnel":{
+cat:"Marketing Digital",promise:"Construisez une stratégie digitale cohérente et transformez votre présence en ligne en opportunités.",aud:["Débutants et professionnels","Entrepreneurs et porteurs de projet","Créateurs de contenu et responsables de communication"],obj:["Comprendre les fondamentaux du marketing digital","Construire une stratégie de contenu","Identifier et mieux comprendre son audience","Mesurer les résultats et améliorer ses actions"],mods:["Fondamentaux du marketing digital","Positionnement, audience et parcours client","Contenu, réseaux sociaux et visibilité","Publicité digitale et conversion","Mesure, optimisation et plan d'action"],format:"100 % en ligne selon la session",level:"Débutant → intermédiaire",support:"Suivi pédagogique selon la session",validation:"Validation des acquis selon les modalités de la session."
+},
+"Community Management & Réseaux Sociaux":{
+cat:"Marketing Digital",promise:"Apprenez à gérer, animer et développer une présence professionnelle sur les réseaux sociaux.",aud:["Débutants","Entrepreneurs et petites entreprises","Community managers en devenir"],obj:["Créer une ligne éditoriale","Planifier et publier des contenus","Animer une communauté","Analyser les performances"],mods:["Rôle et missions du community manager","Stratégie éditoriale","Création et calendrier de contenu","Engagement, modération et communauté","Statistiques et optimisation"],format:"100 % en ligne selon la session",level:"Débutant → intermédiaire",support:"Suivi pédagogique selon la session",validation:"Validation des acquis selon les modalités de la session."
+},
+"Création de Sites Web avec l’IA":{
+cat:"IA & Automatisation",promise:"Utilisez l'intelligence artificielle pour concevoir, personnaliser et publier un site Web moderne.",aud:["Débutants sans expérience avancée en code","Entrepreneurs et freelances","Professionnels souhaitant accélérer leurs projets Web"],obj:["Comprendre la structure d'un site Web","Utiliser l'IA pour générer et améliorer du code","Personnaliser une interface","Préparer et publier un site"],mods:["Anatomie d'un site Web","Brief et architecture avec l'IA","HTML, CSS et personnalisation assistée","Responsive design et optimisation","Publication et bonnes pratiques"],format:"1 week-end / 100 % en ligne selon la session",level:"Débutant",support:"Exercices pratiques et accompagnement pendant la session",validation:"Projet pratique de création de site."
+},
+"Intelligence Artificielle : Fondamentaux & Applications":{
+cat:"IA & Automatisation",promise:"Comprenez l'IA générative et apprenez à l'utiliser dans vos activités professionnelles.",aud:["Débutants","Professionnels de tous secteurs","Entrepreneurs, étudiants et créateurs"],obj:["Comprendre les concepts essentiels","Utiliser des assistants IA","Formuler de meilleures demandes","Identifier des cas d'usage professionnels"],mods:["Comprendre l'IA générative","ChatGPT et assistants IA","Prompting efficace","Création de contenu et productivité","Cas d'usage et bonnes pratiques"],format:"100 % en ligne selon la session",level:"Débutant",support:"Démonstrations et exercices pratiques",validation:"Exercices et/ou projet pratique selon la session."
+},
+"Automatisation Professionnelle avec ChatGPT":{
+cat:"IA & Automatisation",promise:"Transformez les tâches répétitives en workflows plus rapides, structurés et intelligents.",aud:["Professionnels","Entrepreneurs","Assistants et responsables opérationnels"],obj:["Identifier les tâches automatisables","Construire des workflows assistés par IA","Créer des prompts réutilisables","Améliorer productivité et organisation"],mods:["Cartographier les tâches","Prompting orienté workflow","Automatisation de processus","Création de systèmes réutilisables","Projet d'automatisation"],format:"100 % en ligne selon la session",level:"Débutant → intermédiaire",support:"Accompagnement pratique",validation:"Projet d'automatisation."
+},
+"Prompt Engineering":{
+cat:"IA & Automatisation",promise:"Apprenez à donner de meilleures instructions aux modèles d'IA pour obtenir des résultats plus précis et utiles.",aud:["Débutants","Professionnels utilisant l'IA","Créateurs et formateurs"],obj:["Comprendre la logique des prompts","Structurer une demande complexe","Créer des modèles réutilisables","Évaluer et améliorer les réponses"],mods:["Anatomie d'un prompt","Contexte, rôle, contraintes et exemples","Prompts complexes et chaînes de tâches","Évaluation et amélioration","Bibliothèque de prompts"],format:"100 % en ligne selon la session",level:"Débutant → intermédiaire",support:"Exercices corrigés",validation:"Travaux pratiques et validation des compétences."
+},
+"Trading pour Débutants":{
+cat:"Finance",promise:"Construisez une culture de base des marchés et apprenez à lire un graphique dans une approche éducative et disciplinée.",aud:["Débutants complets","Personnes souhaitant comprendre les marchés","Apprenants voulant pratiquer sur environnement démo"],obj:["Comprendre les marchés et instruments","Lire les chandeliers et graphiques","Comprendre le risque et la gestion du capital","Construire une routine d'apprentissage"],mods:["Introduction aux marchés","Lecture des graphiques et chandeliers","Tendance, niveaux et scénarios","Gestion du risque","Pratique sur environnement démo"],format:"100 % en ligne selon la session",level:"Débutant",support:"Exercices et pratique guidée",validation:"Exercices pratiques selon la session."
+},
+"English for Success — EFS":{
+cat:"Langues",promise:"Développez votre aisance en anglais grâce à une pratique régulière centrée sur l'expression et les situations utiles.",aud:["Membres de la communauté","Débutants et faux débutants","Personnes souhaitant gagner en aisance à l'oral"],obj:["Développer le vocabulaire utile","Améliorer la compréhension","Pratiquer des conversations","Gagner en confiance à l'oral"],mods:["Expressions essentielles","Conversation quotidienne","Vocabulaire professionnel","Compréhension et prononciation","Mises en situation"],format:"Sessions en ligne selon l'horaire du programme",level:"Débutant → intermédiaire",support:"Pratique et échanges en groupe",validation:"Exercices et progression suivie."
+}
+};
+
+const params=new URLSearchParams(location.search);
+const requested=params.get("course")||"Marketing Digital : de Débutant à Professionnel";
+const data=catalog[requested]||catalog["Marketing Digital : de Débutant à Professionnel"];
+document.title=data.cat+" — "+requested+" | Lifteam & Technologies";
+document.querySelector("#title").textContent=requested;
+document.querySelector("#crumb").textContent=requested;
+document.querySelector("#promise").textContent=data.promise;
+document.querySelector("#promise2").textContent=data.promise;
+document.querySelector("#category").textContent=data.cat;
+document.querySelector("#format").textContent=data.format;
+document.querySelector("#level").textContent=data.level;
+document.querySelector("#support").textContent=data.support;
+document.querySelector("#validation").textContent=data.validation;
+document.querySelector("#audience").innerHTML=data.aud.map(x=>`<li>${x}</li>`).join("");
+document.querySelector("#objectives").innerHTML=data.obj.map(x=>`<li>${x}</li>`).join("");
+document.querySelector("#modules").innerHTML=data.mods.map((x,i)=>`<div class="module"><strong>Module ${i+1}</strong> — ${x}</div>`).join("");
+document.querySelector("#whatsapp").href="https://wa.me/50938700825?text="+encodeURIComponent("Bonjour Lifteam, je souhaite m'inscrire ou recevoir les détails de la formation : "+requested);
+document.querySelector("#sideTitle").textContent="Commencer : "+requested;
+</script>
+</body>
+</html>

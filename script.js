@@ -42,7 +42,7 @@ let active="all";
 function renderCourses(){
   const q=(search.value||"").toLowerCase().trim();
   const list=courses.filter(c=>(active==="all"||c.cat===active)&&`${c.title} ${c.desc} ${c.label}`.toLowerCase().includes(q));
-  grid.innerHTML=list.map(c=>`<article class="course-card"><span class="cat">${c.label}</span><h3>${c.title}</h3><p>${c.desc}</p><a href="https://wa.me/50938700825?text=${encodeURIComponent("Bonjour Lifteam, je souhaite recevoir les détails de la formation : "+c.title)}" target="_blank" rel="noopener">Demander les détails →</a></article>`).join("");
+  grid.innerHTML=list.map(c=>`<article class="course-card"><span class="cat">${c.label}</span><h3>${c.title}</h3><p>${c.desc}</p><a href="formation.html?course=${encodeURIComponent(c.title)}">Voir la formation →</a></article>`).join("");
   empty.hidden=list.length!==0;
 }
 document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");active=btn.dataset.filter;renderCourses()}));
