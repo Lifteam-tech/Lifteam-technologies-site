@@ -1,5 +1,6 @@
-Lifteam & Technologies — Site V2 complet
+LIFTEAM & TECHNOLOGIES — SITE V3 COMMERCIAL
 Fichiers : index.html, style.css, script.js
-Le site est responsive et prêt pour GitHub Pages.
-Contacts : WhatsApp +509 3870-0825 | jouiner33@gmail.com
-Slogan : Le savoir pour réussir, le digital pour rayonner.
+Version : 3.0
+Objectif : site institutionnel + vitrine commerciale.
+Fonctions : navigation mobile, recherche de formations, filtres par catégorie, CTA WhatsApp, sections Formation/Finance/Agence/LCI/À propos/Contact.
+Déploiement : remplacer les fichiers du dépôt GitHub par ceux-ci, puis attendre le redéploiement GitHub Pages.
