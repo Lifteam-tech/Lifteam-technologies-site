@@ -1,0 +1,97 @@
+{
+  "users": [
+    "id",
+    "email",
+    "password_hash_or_provider_id",
+    "name",
+    "whatsapp",
+    "status",
+    "created_at"
+  ],
+  "products": [
+    "id",
+    "slug",
+    "name",
+    "price",
+    "currency",
+    "digital",
+    "status"
+  ],
+  "orders": [
+    "id",
+    "user_id",
+    "amount",
+    "currency",
+    "status",
+    "payment_reference",
+    "created_at"
+  ],
+  "order_items": [
+    "id",
+    "order_id",
+    "product_id",
+    "quantity",
+    "unit_price"
+  ],
+  "digital_entitlements": [
+    "id",
+    "user_id",
+    "product_id",
+    "order_id",
+    "status",
+    "granted_at",
+    "revoked_at"
+  ],
+  "partners": [
+    "id",
+    "user_id",
+    "partner_code",
+    "status",
+    "level",
+    "commission_rate",
+    "created_at"
+  ],
+  "affiliate_clicks": [
+    "id",
+    "partner_id",
+    "landing_path",
+    "session_reference",
+    "created_at"
+  ],
+  "affiliate_attributions": [
+    "id",
+    "order_id",
+    "partner_id",
+    "click_id",
+    "status",
+    "created_at"
+  ],
+  "commissions": [
+    "id",
+    "order_id",
+    "partner_id",
+    "rate",
+    "amount",
+    "currency",
+    "status",
+    "validated_at"
+  ],
+  "payouts": [
+    "id",
+    "partner_id",
+    "amount",
+    "currency",
+    "status",
+    "payment_reference",
+    "paid_at"
+  ],
+  "audit_events": [
+    "id",
+    "actor_id",
+    "event_type",
+    "entity_type",
+    "entity_id",
+    "metadata",
+    "created_at"
+  ]
+}

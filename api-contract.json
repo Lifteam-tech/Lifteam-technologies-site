@@ -1,0 +1,32 @@
+{
+  "auth": [
+    "POST /api/auth/register",
+    "POST /api/auth/login",
+    "POST /api/auth/logout",
+    "GET /api/auth/me"
+  ],
+  "client": [
+    "GET /api/client/dashboard",
+    "GET /api/client/orders",
+    "GET /api/client/entitlements"
+  ],
+  "products": [
+    "GET /api/products",
+    "GET /api/products/{id}"
+  ],
+  "orders": [
+    "POST /api/orders",
+    "GET /api/orders/{id}"
+  ],
+  "affiliate": [
+    "POST /api/affiliate/click",
+    "GET /api/affiliate/dashboard",
+    "GET /api/affiliate/commissions"
+  ],
+  "admin": [
+    "GET /api/admin/partners",
+    "POST /api/admin/partners/{id}/approve",
+    "POST /api/admin/commissions/{id}/validate",
+    "POST /api/admin/payouts"
+  ]
+}
