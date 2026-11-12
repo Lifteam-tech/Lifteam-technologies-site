@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lifteam Digital Partners — programme de partenaires de Lifteam & Technologies.">
+<meta name="theme-color" content="#10265B">
+<title>Lifteam Digital Partners | Lifteam & Technologies</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="digital-partners.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LIFTEAM <em>&amp;</em></strong><small>TECHNOLOGIES</small></span></a>
+<nav class="desktop-nav">
+<a href="index.html#formations">Formations</a>
+<a href="agence.html">Agence Digitale</a>
+<a href="index.html#lci">LCI</a>
+<a href="portfolio.html">Portfolio</a>
+<a class="active-link" href="digital-partners.html">Digital Partners</a>
+<a class="nav-cta" href="#candidate">Devenir partenaire ↗</a>
+</nav>
+<button class="menu-btn" aria-label="Menu">☰</button>
+</header>
+
+<main>
+<section class="dp-hero">
+<div>
+<p class="eyebrow">LIFTEAM DIGITAL PARTNERS</p>
+<h1>Partagez. Développez. <span>Gagnez.</span></h1>
+<p>Un programme de partenaires pour recommander les produits et programmes digitaux de Lifteam et développer une activité commerciale structurée.</p>
+<div class="actions">
+<a class="btn btn-gold" href="#candidate">Devenir partenaire →</a>
+<a class="btn btn-outline" href="#how">Comment ça marche ?</a>
+</div>
+</div>
+<div class="dp-card">
+<strong>DE 0 À DIGITAL</strong>
+<span>Produit pilote du programme</span>
+<div class="dp-rate">Jusqu'à 50 %</div>
+<small>selon le niveau du partenaire</small>
+</div>
+</section>
+
+<section class="section" id="how">
+<div class="section-heading centered">
+<p class="eyebrow dark">COMMENT ÇA MARCHE ?</p>
+<h2>Un parcours simple et mesurable.</h2>
+</div>
+<div class="dp-steps">
+<div><b>01</b><h3>Candidater</h3><p>Vous soumettez votre candidature au programme.</p></div>
+<div><b>02</b><h3>Être validé</h3><p>Lifteam vérifie votre profil et active votre compte.</p></div>
+<div><b>03</b><h3>Partager</h3><p>Vous recevez votre identifiant et votre lien personnel.</p></div>
+<div><b>04</b><h3>Vendre</h3><p>Les ventes attribuées à votre lien sont suivies.</p></div>
+<div><b>05</b><h3>Progresser</h3><p>Votre niveau évolue selon vos ventes validées.</p></div>
+<div><b>06</b><h3>Recevoir</h3><p>Les commissions éligibles sont validées puis payées.</p></div>
+</div>
+</section>
+
+<section class="section dp-levels">
+<div class="section-heading centered">
+<p class="eyebrow dark">COMMISSIONS</p><h2>Un système pensé pour récompenser la progression.</h2>
+</div>
+<div class="level-grid">
+<div><span>PARTNER</span><strong>40 %</strong><p>1 à 9 ventes validées</p></div>
+<div><span>AMBASSADEUR</span><strong>45 %</strong><p>10 à 24 ventes validées</p></div>
+<div><span>AMBASSADEUR PRO</span><strong>50 %</strong><p>25 à 49 ventes validées</p></div>
+<div><span>LIFTEAM ELITE</span><strong>50 %+*</strong><p>50 ventes et plus · conditions à définir</p></div>
+</div>
+</section>
+
+<section class="section dp-product">
+<div>
+<p class="eyebrow dark">PRODUIT PILOTE</p>
+<h2>DE 0 À DIGITAL</h2>
+<p>Le premier produit utilisé pour tester et structurer le réseau de partenaires Lifteam Digital Partners.</p>
+<ul>
+<li>Produit digital</li>
+<li>Attribution par lien partenaire</li>
+<li>Suivi des ventes</li>
+<li>Commission calculée après validation</li>
+</ul>
+</div>
+<div class="dp-loop"><span>VISITEUR</span><b>→</b><span>ACHAT</span><b>→</b><span>ATTRIBUTION</span><b>→</b><span>COMMISSION</span></div>
+</section>
+
+<section class="section dp-trust">
+<div class="section-heading centered"><p class="eyebrow dark">RÈGLES ESSENTIELLES</p><h2>Un programme commercial, pas une promesse de revenu.</h2></div>
+<div class="rule-grid">
+<div><h3>Pas de faux témoignages</h3><p>Les partenaires doivent utiliser des preuves et informations vérifiables.</p></div>
+<div><h3>Pas de promesses irréalistes</h3><p>Aucune garantie de revenus ou de résultats ne doit être présentée.</p></div>
+<div><h3>Pas de spam</h3><p>La promotion doit respecter les règles des plateformes et les bonnes pratiques commerciales.</p></div>
+<div><h3>Attribution contrôlée</h3><p>Les commissions dépendent des ventes correctement attribuées et validées.</p></div>
+</div>
+</section>
+
+<section class="section dp-form" id="candidate">
+<div class="section-heading">
+<p class="eyebrow dark">CANDIDATURE</p>
+<h2>Je souhaite devenir partenaire.</h2>
+<p>Cette première version prépare l'interface. La validation réelle et l'enregistrement des données seront branchés au backend lors de l'intégration technique.</p>
+</div>
+<form onsubmit="event.preventDefault(); document.querySelector('#candidateMsg').hidden=false;">
+<div class="form-grid">
+<label>Nom complet<input required name="name"></label>
+<label>Email<input required type="email" name="email"></label>
+<label>WhatsApp<input required name="whatsapp"></label>
+<label>Pays<input required name="country"></label>
+<label>Réseau principal<input name="network" placeholder="Facebook, TikTok, Instagram..."></label>
+<label>Audience approximative<input name="audience" placeholder="Ex. 2 000 abonnés"></label>
+</div>
+<label class="full-field">Comment comptez-vous promouvoir Lifteam ?<textarea name="method" rows="4"></textarea></label>
+<label class="check"><input required type="checkbox"> J'accepte les règles du programme.</label>
+<button class="btn btn-gold" type="submit">Envoyer ma candidature →</button>
+<p id="candidateMsg" class="candidate-msg" hidden>Candidature de démonstration enregistrée dans l'interface. La connexion au backend sera effectuée dans la prochaine phase.</p>
+</form>
+</section>
+</main>
+<footer><div class="footer-brand"><span class="brand-mark">L</span><div><strong>LIFTEAM &amp; TECHNOLOGIES</strong><small>Le savoir pour réussir, le digital pour rayonner.</small></div></div><p>© 2026 Lifteam &amp; Technologies</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

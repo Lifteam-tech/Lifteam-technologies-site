@@ -1,0 +1,30 @@
+{
+  "partner": {
+    "id": "LP-0001",
+    "status": "approved",
+    "level": "Partner",
+    "commission_rate": 0.4
+  },
+  "click": {
+    "click_id": "CLK-000001",
+    "partner_id": "LP-0001",
+    "landing_path": "/de0adigital",
+    "created_at": "ISO-8601"
+  },
+  "order": {
+    "order_id": "ORD-000001",
+    "customer_id": "CUS-000001",
+    "product_id": "DE0ADIGITAL",
+    "amount": 20.0,
+    "currency": "USD",
+    "partner_id": "LP-0001",
+    "attribution_status": "pending"
+  },
+  "commission": {
+    "order_id": "ORD-000001",
+    "partner_id": "LP-0001",
+    "rate": 0.4,
+    "amount": 8.0,
+    "status": "pending"
+  }
+}

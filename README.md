@@ -22,3 +22,11 @@ Remplacez les fichiers de la version précédente dans le dépôt GitHub Pages e
 - Ajouter les vraies photos de l'équipe et les logos clients avec autorisation.
 - Vérifier les tarifs, dates et modalités des formations avant chaque campagne.
 - Pour LCI, ne pas présenter un certificat Lifteam comme une accréditation externe sans reconnaissance ou partenariat documenté.
+
+
+## Intégration Lifteam Digital Partners — Phase 1
+- `digital-partners.html` : page publique intégrée à la V4.
+- `digital-partners.css` : styles propres au programme.
+- Les navigations principales ont été reliées à la nouvelle page.
+- Le formulaire est actuellement une interface front-end de démonstration.
+- Le tracking, l'authentification, la base de données, les commissions réelles et les paiements nécessitent encore le backend.
