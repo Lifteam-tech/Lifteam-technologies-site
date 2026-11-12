@@ -1,0 +1,1 @@
+window.LIFTEAM_SUPABASE_CONFIG={url:"",publishableKey:""};
