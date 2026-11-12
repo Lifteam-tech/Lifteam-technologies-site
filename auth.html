@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Connexion et inscription — Lifteam & Technologies.">
+<meta name="theme-color" content="#10265B">
+<title>Mon espace | Lifteam & Technologies</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="digital-partners.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LIFTEAM <em>&amp;</em></strong><small>TECHNOLOGIES</small></span></a>
+<nav class="desktop-nav"><a href="index.html">Accueil</a><a href="digital-partners.html">Digital Partners</a><a class="nav-cta" href="auth.html">Mon espace</a></nav>
+</header>
+<main>
+<section class="inner-hero compact">
+<p class="eyebrow">ESPACE LIFTEAM</p>
+<h1>Votre espace personnel</h1>
+<p>Créez votre compte ou connectez-vous pour accéder progressivement à vos achats, ressources et outils partenaires.</p>
+</section>
+<section class="section" style="max-width:980px;margin:auto">
+<div class="dp-grid">
+<article class="dp-card">
+<p class="eyebrow dark">CONNEXION</p>
+<h2>J’ai déjà un compte</h2>
+<form id="loginForm" class="dp-form">
+<label>E-mail<input id="loginEmail" type="email" required autocomplete="email"></label>
+<label>Mot de passe<input id="loginPassword" type="password" required autocomplete="current-password"></label>
+<button class="btn btn-gold" type="submit">Se connecter →</button>
+</form>
+</article>
+<article class="dp-card">
+<p class="eyebrow dark">INSCRIPTION</p>
+<h2>Créer mon compte</h2>
+<form id="signupForm" class="dp-form">
+<label>Nom complet<input id="signupName" type="text" autocomplete="name"></label>
+<label>E-mail<input id="signupEmail" type="email" required autocomplete="email"></label>
+<label>Mot de passe<input id="signupPassword" type="password" required minlength="8" autocomplete="new-password"></label>
+<button class="btn btn-dark" type="submit">Créer mon compte →</button>
+</form>
+</article>
+</div>
+<p id="authStatus" class="proof-note" style="margin-top:24px"></p>
+</section>
+</main>
+<footer><div class="footer-brand"><span class="brand-mark">L</span><div><strong>LIFTEAM &amp; TECHNOLOGIES</strong><small>Le savoir pour réussir, le digital pour rayonner.</small></div></div><p>© 2026 Lifteam &amp; Technologies</p></footer>
+</body>
+</html>

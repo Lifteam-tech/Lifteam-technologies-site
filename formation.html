@@ -36,7 +36,7 @@
 <body>
 <header class="site-header">
 <a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LIFTEAM <em>&amp;</em></strong><small>TECHNOLOGIES</small></span></a>
-<nav class="desktop-nav"><a href="index.html#formations">Formations</a><a href="index.html#agence">Agence Digitale</a><a href="index.html#lci">LCI</a><a class="nav-cta" href="index.html#contact">Parler à Lifteam ↗</a></nav>
+<nav class="desktop-nav"><a href="index.html#formations">Formations</a><a href="index.html#agence">Agence Digitale</a><a href="index.html#lci">LCI</a><a class="nav-cta" href="index.html#contact">Parler à Lifteam ↗</a><a href="auth.html">Mon espace</a></nav>
 <a class="menu-btn" href="index.html">☰</a>
 </header>
 
@@ -151,5 +151,5 @@ document.querySelector("#modules").innerHTML=data.mods.map((x,i)=>`<div class="m
 document.querySelector("#whatsapp").href="https://wa.me/50938700825?text="+encodeURIComponent("Bonjour Lifteam, je souhaite m'inscrire ou recevoir les détails de la formation : "+requested);
 document.querySelector("#sideTitle").textContent="Commencer : "+requested;
 </script>
-</body>
+<script src="referral.js"></script></body>
 </html>

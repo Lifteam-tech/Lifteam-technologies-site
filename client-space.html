@@ -1,45 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Espace Client | Lifteam Et Technologie</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Espace client Lifteam & Technologies.">
+<meta name="theme-color" content="#10265B">
+<title>Espace Client | Lifteam & Technologies</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="client-space.css">
+<link rel="stylesheet" href="digital-partners.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="referral.js"></script>
+<script src="auth.js" defer></script>
 </head>
-<body>
-<header class="client-header">
-<a class="brand" href="index.html">LIFTEAM <span>ET TECHNOLOGIE</span></a>
-<nav>
-<a href="index.html">Accueil</a>
-<a href="formation.html">Formations</a>
-<a href="digital-partners.html">Digital Partners</a>
-<a href="client-space.html">Espace Client</a>
-</nav>
+<body data-auth-required="true">
+<header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LIFTEAM <em>&amp;</em></strong><small>TECHNOLOGIES</small></span></a>
+<nav class="desktop-nav"><a href="index.html">Accueil</a><a href="digital-partners.html">Digital Partners</a><button id="logoutBtn" class="btn btn-outline dark-outline">Déconnexion</button></nav>
 </header>
-<main class="client-shell">
-<section class="client-hero">
-<div><span class="eyebrow">ESPACE CLIENT</span>
-<h1>Votre espace numérique Lifteam</h1>
-<p>Retrouvez vos achats, vos ressources et l'accès à vos programmes depuis un même espace.</p></div>
-<div class="account-card"><div class="avatar">LC</div><div><strong>Compte client</strong><small>Connexion sécurisée à venir</small></div></div>
+<main>
+<section class="inner-hero compact">
+<p class="eyebrow">ESPACE CLIENT</p>
+<h1>Bienvenue dans votre espace Lifteam.</h1>
+<p>Compte connecté : <strong id="clientEmail"></strong></p>
 </section>
-<section class="client-grid">
-<article class="client-card featured">
-<div class="icon">📘</div><div><span class="status">PRODUIT</span><h2>DE 0 À DIGITAL</h2>
-<p>Votre guide pratique pour passer de l'idée à une activité digitale structurée.</p>
-<div class="progress"><span style="width:35%"></span></div><small>Interface d'accès prête</small></div>
-<button class="btn-primary" onclick="showProtectedNotice()">Accéder au contenu</button>
-</article>
-<article class="client-card"><div class="icon">🧾</div><span class="status">ACHATS</span><h2>Historique</h2><p>Commandes, références et reçus seront affichés ici après connexion.</p></article>
-<article class="client-card"><div class="icon">🎁</div><span class="status">RESSOURCES</span><h2>Mes ressources</h2><p>Bonus, documents complémentaires et mises à jour liés à vos achats.</p></article>
-<article class="client-card"><div class="icon">🤝</div><span class="status">OPPORTUNITÉ</span><h2>Devenir partenaire</h2><p>Transformez votre expérience client en opportunité avec Lifteam Digital Partners.</p>
-<a class="btn-secondary" href="digital-partners.html">Découvrir le programme</a></article>
+<section class="section" style="max-width:1100px;margin:auto">
+<div class="dp-grid">
+<article class="dp-card"><p class="eyebrow dark">MES ACHATS</p><h2>DE 0 À DIGITAL</h2><p>Votre accès au produit apparaîtra ici après validation du paiement et de vos droits d’accès.</p><span class="status-badge">En préparation</span></article>
+<article class="dp-card"><p class="eyebrow dark">MES RESSOURCES</p><h2>Bibliothèque</h2><p>Les ressources associées à vos achats seront accessibles depuis cet espace.</p><span class="status-badge">En préparation</span></article>
+<article class="dp-card"><p class="eyebrow dark">DEVENIR PARTENAIRE</p><h2>Digital Partners</h2><p>Vous pouvez rejoindre le programme pour recommander les produits Lifteam.</p><a class="btn btn-gold" href="digital-partners.html">Découvrir le programme →</a></article>
+</div>
+<div class="proof-note" style="margin-top:24px"><strong>Référence affiliée détectée :</strong> <span id="affiliateRef">aucune</span>. Cette information est une première capture navigateur ; l’attribution finale sera validée côté serveur.</div>
 </section>
-<section class="security-note"><div><strong>Protection des contenus</strong>
-<p>La version finale vérifiera côté serveur l'identité du client, son paiement et ses droits avant de délivrer le contenu numérique.</p></div><span>🔒</span></section>
 </main>
-<footer><p>© Lifteam Et Technologie — Le savoir pour réussir, le digital pour rayonner.</p></footer>
-<script>function showProtectedNotice(){alert("L'interface est prête. L'accès sécurisé sera activé avec le backend et la validation du paiement.");}</script>
+<footer><div class="footer-brand"><span class="brand-mark">L</span><div><strong>LIFTEAM &amp; TECHNOLOGIES</strong><small>Le savoir pour réussir, le digital pour rayonner.</small></div></div><p>© 2026 Lifteam &amp; Technologies</p></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("affiliateRef");
+  if (el && window.LifteamReferral) el.textContent = window.LifteamReferral.get() || "aucune";
+});
+</script>
 </body>
 </html>
