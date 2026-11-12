@@ -1,67 +1,41 @@
-# Lifteam Digital Partners — Brique 04 : Backend Contract
+# Lifteam & Technologies — V4
 
-Cette brique prépare l'intégration sécurisée du programme d'affiliation dans V4.
+V4 fusionne les évolutions prévues pour V3.2 et V3.3 en une seule version commerciale.
 
-## Principe
+## Fichiers
+- `index.html` : accueil, formations, méthode, agence, LCI, preuves, témoignages, portfolio, FAQ et contact.
+- `formation.html` : fiches dynamiques des formations.
+- `agence.html` : hub commercial des 8 services de l'Agence Digitale.
+- `service.html` : fiche détaillée dynamique pour chacun des 8 services.
+- `portfolio.html` : structure de portfolio et études de cas.
+- `a-propos.html` : vision, mission et valeurs.
+- `styles.css` : identité visuelle responsive.
+- `script.js` : catalogue formations, filtres et services.
 
-Le site V4 reste le front-end. Les fonctions sensibles doivent être exécutées côté serveur :
-- comptes utilisateurs ;
-- validation des partenaires ;
-- attribution des ventes ;
-- calcul des commissions ;
-- validation/rejet des commissions ;
-- paiements ;
-- détection d'anomalies ;
-- protection des contenus numériques.
+## Mise en ligne
+Remplacez les fichiers de la version précédente dans le dépôt GitHub Pages et conservez les mêmes noms de fichiers. Le site fonctionne sans serveur et reste compatible avec GitHub Pages.
 
-## Flux de référence
+## À personnaliser avant une communication commerciale
+- Remplacer les témoignages de démonstration par des témoignages vérifiés.
+- Remplacer les catégories de portfolio par les réalisations réelles et leurs résultats vérifiables.
+- Vérifier les chiffres 6+, 500+ et 50+ avant publication si nécessaire.
+- Ajouter les vraies photos de l'équipe et les logos clients avec autorisation.
+- Vérifier les tarifs, dates et modalités des formations avant chaque campagne.
+- Pour LCI, ne pas présenter un certificat Lifteam comme une accréditation externe sans reconnaissance ou partenariat documenté.
 
-1. Le visiteur arrive avec `?ref=LP-0001`.
-2. Le front-end conserve temporairement la référence pour transmettre l'intention d'affiliation.
-3. Lors d'une commande, le serveur reçoit la référence et détermine l'affilié.
-4. Le serveur calcule la commission selon le niveau réel du partenaire.
-5. La commission reste `pending` jusqu'à validation.
-6. Après validation, elle peut passer à `payable`, puis `paid`.
 
-## API proposée
+## Intégration Lifteam Digital Partners — Phase 1
+- `digital-partners.html` : page publique intégrée à la V4.
+- `digital-partners.css` : styles propres au programme.
+- Les navigations principales ont été reliées à la nouvelle page.
+- Le formulaire est actuellement une interface front-end de démonstration.
+- Le tracking, l'authentification, la base de données, les commissions réelles et les paiements nécessitent encore le backend.
 
-POST /api/affiliate/click
-POST /api/orders
-POST /api/affiliate/attribute
-POST /api/affiliate/validate
-GET  /api/affiliate/dashboard
-GET  /api/affiliate/commissions
-POST /api/affiliate/payout
 
-## Règle critique
+## Brique 05 — Espace Client
+Ajout de `client-space.html` et `client-space.css` pour préparer l'espace client, l'accès à DE 0 À DIGITAL, l'historique, les ressources et le passage vers Digital Partners. La sécurité réelle (authentification, paiement, droits et délivrance) reste côté serveur.
 
-Le navigateur ne doit jamais être l'autorité pour :
-- le montant d'une commission ;
-- le niveau d'un affilié ;
-- la validation d'une vente ;
-- le statut d'un paiement.
 
-Ces valeurs doivent être recalculées et contrôlées côté serveur.
+## Brique 06 — Backend Foundation
 
-## Statuts
-
-Partner:
-pending | approved | suspended | rejected | disabled
-
-Commission:
-pending | validated | rejected | payable | paid
-
-## Objet minimal d'une vente
-
-{
-  "order_id": "ORD-000001",
-  "customer_id": "CUS-000001",
-  "product_id": "DE0ADIGITAL",
-  "partner_id": "LP-0001",
-  "order_amount": 20.00,
-  "commission_rate": 0.40,
-  "commission_amount": 8.00,
-  "status": "pending"
-}
-
-Cette structure est un contrat de référence, pas un backend actif.
+Ajout de `backend-foundation/` avec le modèle de données et le contrat API de référence pour les comptes clients, commandes, droits numériques, partenaires, commissions et paiements.
