@@ -1,42 +1,154 @@
+
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Espace client Lifteam & Technologies.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Espace partenaire Lifteam Digital Partners.">
 <meta name="theme-color" content="#10265B">
-<title>Espace Client | Lifteam & Technologies</title>
+<title>Mon tableau de bord | Lifteam</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="digital-partners.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="supabase-config.js"></script>
 <script src="referral.js"></script>
 <script src="auth.js" defer></script>
+<style>
+.dashboard{max-width:1100px;margin:35px auto;padding:20px}
+.dash-heading{background:#10265b;color:white;padding:30px;border-radius:18px}
+.dash-heading h1{margin:8px 0;color:white}
+.dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.dash-card{background:white;border:1px solid #e5e8ee;border-radius:16px;padding:22px;box-shadow:0 5px 20px #10265b0c}
+.dash-card small{color:#667085;font-weight:700}
+.dash-card strong{display:block;font-size:27px;color:#10265b;margin-top:12px;overflow-wrap:anywhere}
+.dash-code{background:#f7f8fb;padding:20px;border-radius:14px;margin:20px 0}
+.dash-code strong{font-size:22px;color:#10265b}
+.dash-button{background:#10265b;color:white;border:0;padding:12px 18px;border-radius:9px;margin-top:12px}
+.dash-message{padding:14px;border-radius:10px;background:#f7f8fb;margin:15px 0}
+@media(max-width:650px){.dash-grid{grid-template-columns:1fr 1fr}.dashboard{padding:12px}.dash-heading{padding:22px}}
+</style>
 </head>
 <body data-auth-required="true">
 <header class="site-header">
-<a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LIFTEAM <em>&amp;</em></strong><small>TECHNOLOGIES</small></span></a>
-<nav class="desktop-nav"><a href="index.html">Accueil</a><a href="digital-partners.html">Digital Partners</a><button id="logoutBtn" class="btn btn-outline dark-outline">Déconnexion</button></nav>
+<a class="brand" href="index.html">
+<span class="brand-mark">L</span>
+<span><strong>LIFTEAM <em>&amp;</em></strong><small>TECHNOLOGIES</small></span>
+</a>
+<nav class="desktop-nav">
+<a href="index.html">Accueil</a>
+<a href="digital-partners.html">Digital Partners</a>
+<button id="logoutBtn" class="btn btn-outline dark-outline">Déconnexion</button>
+</nav>
 </header>
-<main>
-<section class="inner-hero compact">
-<p class="eyebrow">ESPACE CLIENT</p>
-<h1>Bienvenue dans votre espace Lifteam.</h1>
-<p>Compte connecté : <strong id="clientEmail"></strong></p>
+
+<main class="dashboard">
+<section class="dash-heading">
+<p>ESPACE PARTENAIRE</p>
+<h1>Mon tableau de bord</h1>
+<p>Bienvenue, <strong id="clientEmail">Partenaire</strong></p>
 </section>
-<section class="section" style="max-width:1100px;margin:auto">
-<div class="dp-grid">
-<article class="dp-card"><p class="eyebrow dark">MES ACHATS</p><h2>DE 0 À DIGITAL</h2><p>Votre accès au produit apparaîtra ici après validation du paiement et de vos droits d’accès.</p><span class="status-badge">En préparation</span></article>
-<article class="dp-card"><p class="eyebrow dark">MES RESSOURCES</p><h2>Bibliothèque</h2><p>Les ressources associées à vos achats seront accessibles depuis cet espace.</p><span class="status-badge">En préparation</span></article>
-<article class="dp-card"><p class="eyebrow dark">DEVENIR PARTENAIRE</p><h2>Digital Partners</h2><p>Vous pouvez rejoindre le programme pour recommander les produits Lifteam.</p><a class="btn btn-gold" href="digital-partners.html">Découvrir le programme →</a></article>
+
+<div id="dashMessage" class="dash-message">Chargement de vos données...</div>
+
+<section id="partnerDashboard" hidden>
+<div class="dash-code">
+<small>MON CODE PARTENAIRE</small>
+<strong id="partnerCode">---</strong><br>
+<button class="dash-button" id="copyCode">Copier mon code</button>
+<p>Statut : <strong id="partnerStatus">---</strong></p>
+<p>Niveau : <strong id="partnerLevel">---</strong></p>
+<p>Taux de commission : <strong id="commissionRate">---</strong></p>
 </div>
-<div class="proof-note" style="margin-top:24px"><strong>Référence affiliée détectée :</strong> <span id="affiliateRef">aucune</span>. Cette information est une première capture navigateur ; l’attribution finale sera validée côté serveur.</div>
+
+<div class="dash-grid">
+<article class="dash-card"><small>TOTAL CLICS</small><strong id="totalClicks">0</strong></article>
+<article class="dash-card"><small>TOTAL VENTES</small><strong id="totalSales">0</strong></article>
+<article class="dash-card"><small>TOTAL REVENUS</small><strong id="totalRevenue">$0.00</strong></article>
+<article class="dash-card"><small>COMMISSIONS</small><strong id="totalCommission">$0.00</strong></article>
+<article class="dash-card"><small>COMMISSIONS PAYÉES</small><strong id="paidCommission">$0.00</strong></article>
+<article class="dash-card"><small>COMMISSIONS EN ATTENTE</small><strong id="pendingCommission">$0.00</strong></article>
+</div>
+</section>
+
+<section class="dash-card">
+<h2>Mes activités</h2>
+<p>Vos statistiques seront actualisées à mesure que les clics, ventes et commissions seront enregistrés dans Supabase.</p>
+<a class="btn btn-gold" href="digital-partners.html">Programme Digital Partners</a>
 </section>
 </main>
-<footer><div class="footer-brand"><span class="brand-mark">L</span><div><strong>LIFTEAM &amp; TECHNOLOGIES</strong><small>Le savoir pour réussir, le digital pour rayonner.</small></div></div><p>© 2026 Lifteam &amp; Technologies</p></footer>
+
+<footer>
+<div class="footer-brand">
+<span class="brand-mark">L</span>
+<div><strong>LIFTEAM &amp; TECHNOLOGIES</strong><small>Le savoir pour réussir, le digital pour rayonner.</small></div>
+</div>
+<p>© 2026 Lifteam &amp; Technologies</p>
+</footer>
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const el = document.getElementById("affiliateRef");
-  if (el && window.LifteamReferral) el.textContent = window.LifteamReferral.get() || "aucune";
+document.addEventListener("DOMContentLoaded", async () => {
+  const message = document.getElementById("dashMessage");
+  const dashboard = document.getElementById("partnerDashboard");
+
+  try {
+    const client = window.lifteamSupabase;
+    if (!client) throw new Error("Connexion Supabase indisponible.");
+
+    const { data: sessionData } = await client.auth.getSession();
+    const session = sessionData.session;
+
+    if (!session) {
+      location.href = "auth.html";
+      return;
+    }
+
+    document.getElementById("clientEmail").textContent =
+      session.user.email || "Partenaire";
+
+    const { data, error } = await client.rpc("get_my_partner");
+    if (error) throw error;
+
+    const partner = Array.isArray(data) ? data[0] : data;
+
+    if (!partner) {
+      message.textContent = "Aucun profil partenaire trouvé pour ce compte.";
+      return;
+    }
+
+    const money = value => "$" + Number(value || 0).toFixed(2);
+    const rate = Number(partner.commission_rate || 0);
+    const commissionRate = rate > 1 ? rate : rate * 100;
+
+    document.getElementById("partnerCode").textContent = partner.partner_code;
+    document.getElementById("partnerStatus").textContent = partner.status;
+    document.getElementById("partnerLevel").textContent = partner.level;
+    document.getElementById("commissionRate").textContent = commissionRate + "%";
+    document.getElementById("totalClicks").textContent = partner.total_clicks || 0;
+    document.getElementById("totalSales").textContent = partner.total_sales || 0;
+    document.getElementById("totalRevenue").textContent = money(partner.total_revenue);
+    document.getElementById("totalCommission").textContent = money(partner.total_commission);
+    document.getElementById("paidCommission").textContent = money(partner.paid_commission);
+
+    const pending = Math.max(
+      0,
+      Number(partner.total_commission || 0) - Number(partner.paid_commission || 0)
+    );
+    document.getElementById("pendingCommission").textContent = money(pending);
+
+    document.getElementById("copyCode").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(partner.partner_code);
+        message.textContent = "Code partenaire copié.";
+      } catch (e) {
+        message.textContent = "Code partenaire : " + partner.partner_code;
+      }
+    });
+
+    dashboard.hidden = false;
+    message.textContent = "Vos données partenaire sont chargées.";
+  } catch (error) {
+    message.textContent = "Impossible de charger le tableau de bord : " + error.message;
+  }
 });
 </script>
 </body>
