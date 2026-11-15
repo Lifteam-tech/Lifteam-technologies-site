@@ -14,7 +14,7 @@
 
         const code = ref.trim();
 
-        if (!/^LP-[A-Z0-9-]+$/i.test(code)) {
+        if (!/^LIFTEAM-[A-Z0-9-]+$/i.test(code)) {
             return null;
         }
 
