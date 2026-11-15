@@ -52,26 +52,43 @@
         return visitorId;
     }
 
-    async function recordAffiliateClick(partnerCode) {
-        if (!partnerCode) {
-            return;
-        }
+async function recordAffiliateClick(partnerCode) {
+    if (!partnerCode) {
+        return;
+    }
 
-        if (!window.lifteamSupabase) {
-            console.warn("Supabase n'est pas disponible.");
-            return;
-        }
+    let attempts = 0;
 
-        try {
-            await window.lifteamSupabase.rpc("record_affiliate_click", {
+    while (!window.lifteamSupabase && attempts < 20) {
+        await new Promise(resolve => setTimeout(resolve, 250));
+        attempts++;
+    }
+
+    if (!window.lifteamSupabase) {
+        console.warn("Supabase n'est pas disponible.");
+        return;
+    }
+
+    try {
+        const { error } = await window.lifteamSupabase.rpc(
+            "record_affiliate_click",
+            {
                 p_partner_code: partnerCode,
                 p_landing_page: window.location.href,
                 p_visitor_id: getVisitorId()
-            });
-        } catch (error) {
-            console.error("Erreur lors de l'enregistrement du clic :", error);
+            }
+        );
+
+        if (error) {
+            console.error("Erreur Supabase :", error);
+            return;
         }
+
+        console.log("Clic partenaire enregistré.");
+    } catch (error) {
+        console.error("Erreur lors de l'enregistrement du clic :", error);
     }
+}
 
     const partnerCode = getPartnerCodeFromUrl();
 
