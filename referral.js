@@ -90,12 +90,14 @@ async function recordAffiliateClick(partnerCode) {
     }
 }
 
+    window.addEventListener("load", async function () {
     const partnerCode = getPartnerCodeFromUrl();
 
     if (partnerCode) {
         savePartnerCode(partnerCode);
-        recordAffiliateClick(partnerCode);
+        await recordAffiliateClick(partnerCode);
     }
+});
 
     window.LifteamReferral = {
         getPartnerCode: getStoredPartnerCode,
