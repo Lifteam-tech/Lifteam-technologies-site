@@ -3,7 +3,7 @@
   const cfg = window.LIFTEAM_SUPABASE;
   if (!cfg || !window.supabase) return;
 
-  const client = window.supabase.createClient(cfg.url, cfg.publishableKey);
+  const client = window.lifteamSupabase = client;.supabase.createClient(cfg.url, cfg.publishableKey);
   window.lifteamSupabase = client;
 
   function $(id) { return document.getElementById(id); }
