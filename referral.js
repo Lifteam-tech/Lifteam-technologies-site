@@ -12,7 +12,7 @@
             return null;
         }
 
-        const code = ref.trim();
+        const code = ref.replace(/[\u200B-\u200D\u2060\uFEFF]/g, "").trim();
 
         if (!/^LIFTEAM-[A-Z0-9-]+$/i.test(code)) {
             return null;
