@@ -97,9 +97,20 @@ async function recordAffiliateClick(partnerCode) {
         savePartnerCode(partnerCode);
         await recordAffiliateClick(partnerCode);
     }
-});console.log("LIFTEAM REFERRAL : SCRIPT CHARGÉ");
-console.log("SUPABASE CLIENT :", !!window.lifteamSupabase);
-console.log("CODE PARTENAIRE :", getPartnerCodeFromUrl());
+});const diagnostic = document.createElement("div");
+
+diagnostic.style.cssText =
+    "position:fixed;bottom:10px;left:10px;right:10px;" +
+    "z-index:999999;background:#10265B;color:white;" +
+    "padding:15px;border-radius:10px;font-size:14px;";
+
+diagnostic.innerHTML =
+    "<strong>LIFTEAM — DIAGNOSTIC</strong><br><br>" +
+    "Script : CHARGÉ<br>" +
+    "Supabase : " + (!!window.lifteamSupabase ? "DISPONIBLE" : "ABSENT") + "<br>" +
+    "Code partenaire : " + (getPartnerCodeFromUrl() || "ABSENT");
+
+document.body.appendChild(diagnostic);
 
     window.LifteamReferral = {
         getPartnerCode: getStoredPartnerCode,
