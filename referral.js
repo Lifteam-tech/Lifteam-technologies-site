@@ -97,7 +97,9 @@ async function recordAffiliateClick(partnerCode) {
         savePartnerCode(partnerCode);
         await recordAffiliateClick(partnerCode);
     }
-});
+});console.log("LIFTEAM REFERRAL : SCRIPT CHARGÉ");
+console.log("SUPABASE CLIENT :", !!window.lifteamSupabase);
+console.log("CODE PARTENAIRE :", getPartnerCodeFromUrl());
 
     window.LifteamReferral = {
         getPartnerCode: getStoredPartnerCode,
